@@ -90,7 +90,9 @@ export default {
   },
 
   server: {
-    port: process.env.PORT || 3000
+    protocol: process.env.PROTOCOL,
+    host: process.env.HOST,
+    port: process.env.PORT
   },
 
   bootstrapVue: {
