@@ -44,8 +44,4 @@ export const mutations = {
   setWorkspaces(state, data){
     state.workspaces = data
   },
-
-  setOneWorkspace(state, data){
-    state.currentWorkspace = data
-  },
 }
