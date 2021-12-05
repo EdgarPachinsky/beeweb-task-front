@@ -89,6 +89,10 @@ export default {
     }
   },
 
+  server: {
+    port: process.env.PORT || 3000
+  },
+
   bootstrapVue: {
     // Install the `IconsPlugin` plugin (in addition to `BootstrapVue` plugin)
     icons: true
