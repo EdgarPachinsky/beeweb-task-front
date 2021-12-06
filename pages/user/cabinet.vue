@@ -186,7 +186,7 @@ export default {
   data() {
     return {
       timestamp: "",
-      userAvatar: `https://beewebtaskbackend.herokuapp.com/file/${this.$auth.user.avatar ? this.$auth.user.avatar : "placeholder.png"}`,
+      userAvatar: `http://localhost:3000/file/${this.$auth.user.avatar ? this.$auth.user.avatar : "placeholder.png"}`,
       avatarImagePrev: null,
       avatarImage: null,
       invitations: [],

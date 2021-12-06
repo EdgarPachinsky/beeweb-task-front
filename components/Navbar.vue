@@ -57,7 +57,7 @@ export default {
   data(){
     return{
       timestamp: "",
-      hostPrefix: `https://beewebtaskbackend.herokuapp.com/file`,
+      hostPrefix: `http://localhost:3000/file`,
       avatar: null,
     }
   },

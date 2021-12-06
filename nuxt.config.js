@@ -48,8 +48,7 @@ export default {
   ],
 
   axios:{
-    // baseUrl: "http://localhost:3000"
-    baseUrl: "https://beewebtaskbackend.herokuapp.com"
+    baseUrl: "http://localhost:3000/"
   },
 
   auth: {
@@ -90,9 +89,7 @@ export default {
   },
 
   server: {
-    protocol: process.env.PROTOCOL,
-    host: process.env.HOST,
-    port: process.env.PORT
+    port: 8000
   },
 
   bootstrapVue: {

@@ -59,7 +59,7 @@ export default {
 
   data() {
     return {
-      hostPrefix: `https://beewebtaskbackend.herokuapp.com/file`,
+      hostPrefix: `http://localhost:3000/file`,
       channels: []
     }
   },

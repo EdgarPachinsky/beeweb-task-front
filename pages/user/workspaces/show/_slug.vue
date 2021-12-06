@@ -156,7 +156,7 @@ export default {
       addUserActive: false,
       wsImage: null,
       wsId: null,
-      hostPrefix: `https://beewebtaskbackend.herokuapp.com/file`,
+      hostPrefix: `http://localhost:3000/file`,
       name: null,
       description: null,
       image: null,
