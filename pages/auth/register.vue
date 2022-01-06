@@ -83,22 +83,22 @@
         </b-form-group>
 
 
-        <b-form-group
-          description="Avatar"
-          id="input-group-6" label="Avatar:" label-for="avatar">
-          <b-form-file
-            id="avatar"
-            @change="createImageUrl($event)"
-            v-model="form.avatar"
-            class="margin-bottom-6"
-            placeholder="Choose a file or drop it here..."
-            drop-placeholder="Drop file here..."
-          ></b-form-file>
-          <div class="mt-3">Selected file: {{ form.avatar ? form.avatar.name : '' }}</div>
-        </b-form-group>
-        <div v-if="avatarImagePrev" class="avatar-image-preview">
-          <img :src="avatarImagePrev" alt="Token Image">
-        </div>
+<!--        <b-form-group-->
+<!--          description="Avatar"-->
+<!--          id="input-group-6" label="Avatar:" label-for="avatar">-->
+<!--          <b-form-file-->
+<!--            id="avatar"-->
+<!--            @change="createImageUrl($event)"-->
+<!--            v-model="form.avatar"-->
+<!--            class="margin-bottom-6"-->
+<!--            placeholder="Choose a file or drop it here..."-->
+<!--            drop-placeholder="Drop file here..."-->
+<!--          ></b-form-file>-->
+<!--          <div class="mt-3">Selected file: {{ form.avatar ? form.avatar.name : '' }}</div>-->
+<!--        </b-form-group>-->
+<!--        <div v-if="avatarImagePrev" class="avatar-image-preview">-->
+<!--          <img :src="avatarImagePrev" alt="Token Image">-->
+<!--        </div>-->
       </b-col>
 
       <b-col cols="12">
@@ -137,8 +137,8 @@ export default {
 
   data() {
     return {
-      avatarImagePrev: null,
-      avatarImage: null,
+      // avatarImagePrev: null,
+      // avatarImage: null,
       form: {
         email: '',
         firstName: '',
@@ -146,21 +146,21 @@ export default {
         username: '',
         password: null,
         age: null,
-        avatar: null,
+        // avatar: null,
         checked: [],
       },
     }
   },
 
   methods: {
-    createImageUrl(event) {
-
-      if (!event.target.files)
-        return
-
-      this.avatarImage = event.target.files[0]
-      this.avatarImagePrev = URL.createObjectURL(this.avatarImage)
-    },
+    // createImageUrl(event) {
+    //
+    //   if (!event.target.files)
+    //     return
+    //
+    //   this.avatarImage = event.target.files[0]
+    //   this.avatarImagePrev = URL.createObjectURL(this.avatarImage)
+    // },
 
     validateEmail(mail) {
       return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail);
@@ -201,10 +201,10 @@ export default {
       form.append('age', parseInt(this.form.age))
       form.append('username', this.form.username)
       form.append('password', this.form.password)
-      form.append('avatar', this.avatarImage)
+      // form.append('avatar', this.avatarImage)
 
       //request to back end to save user
-      this.$axios.post('/users/register', form).then(({data}) => {
+      this.$axios.post('/user/save', form).then(({data}) => {
 
         //emmit message to default layout
         this.$nuxt.$emit('setMessage', {type: data.status, message: data.status})
@@ -231,9 +231,9 @@ export default {
       this.form.age = null
       this.form.username = null
       this.form.password = null
-      this.form.avatar = null
-      this.avatarImage = null
-      this.avatarImagePrev = null
+      // this.form.avatar = null
+      // this.avatarImage = null
+      // this.avatarImagePrev = null
     },
   },
 

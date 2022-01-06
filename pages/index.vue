@@ -1,24 +1,24 @@
 <template>
   <div>
 
-    <h1>Hello in our workspace managing tool</h1>
+    <h1>Hello in our workspace</h1>
     <hr>
     <h2>What can you do here</h2>
     <ul>
       <li>
-        first create your account
+        action 1
       </li>
       <li>
-        create your workspace and manage it
+        action 2
       </li>
       <li>
-        add unique image to your workspace
+        action 3
       </li>
       <li>
-        create channels for your workspaces
+        action 4
       </li>
       <li>
-        invite other people tou your workspace
+        action 5
       </li>
     </ul>
     <hr>
@@ -26,19 +26,17 @@
       type="button"
       variant="danger"
       class="margin-bottom-15"
-      to="/user/workspaces/actions/list">Lets get started</b-button>
-
+      to="/user/cabinet">Lets get started</b-button>
   </div>
 </template>
 
 <script>
-import WorkspaceList from "../components/Workspaces";
+// import WorkspaceList from "../components/Workspaces";
 
 export default {
 
-
   components: {
-    WorkspaceList,
+    // WorkspaceList,
   },
 
   data() {
@@ -52,7 +50,7 @@ export default {
   },
 
   mounted() {
-    $nuxt.$emit('setPageTitle', {title: 'WorkspaceIO'})
+    $nuxt.$emit('setPageTitle', {title: 'Multi tool for tracking device information'})
   }
 }
 </script>

@@ -6,12 +6,11 @@
       class="margin-bottom-15"
       to="/user/workspaces/actions/create">Create new workspace</b-button>
 
-    <Workspaces/>
+<!--    <Workspaces/>-->
   </div>
 </template>
 
 <script>
-import Workspaces from "../../../../components/Workspaces";
 
 export default {
   name: "create",
@@ -19,7 +18,7 @@ export default {
   middleware: 'auth',
 
   components: {
-    Workspaces
+
   },
 
   data() {

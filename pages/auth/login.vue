@@ -28,12 +28,12 @@
       </b-col>
 
 
-      <b-col sm="12" md="6" lg="6">
-        <h2>Or use</h2>
+<!--      <b-col sm="12" md="6" lg="6">-->
+<!--        <h2>Or use</h2>-->
 
-        <b-button type="button" variant="" @click="loginWithFB">
-          <b-icon icon="facebook"></b-icon>
-        </b-button>
+<!--        <b-button type="button" variant="" @click="loginWithFB">-->
+<!--          <b-icon icon="facebook"></b-icon>-->
+<!--        </b-button>-->
 
 <!--        <b-button type="button" variant="">-->
 <!--          <b-icon icon="google"></b-icon>-->
@@ -42,7 +42,7 @@
 <!--        <b-button type="button" variant="">-->
 <!--          <b-icon icon="github"></b-icon>-->
 <!--        </b-button>-->
-      </b-col>
+<!--      </b-col>-->
 
       <b-col sm="12">
         <hr>
@@ -89,7 +89,7 @@ export default {
           password: this.form.password
         }
       }).then(({data}) => {
-
+        console.log(data)
         this.$nuxt.$emit('setMessage', {type: data.status, message: data.message })
       })
     },

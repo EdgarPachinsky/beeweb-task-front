@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Workspaces',
+    title: 'MultiTOOL',
     htmlAttrs: {
       lang: 'en'
     },
@@ -62,12 +62,12 @@ export default {
         },
         user: {
           property: 'user',
-          // autoFetch: true
+          autoFetch: true
         },
         endpoints: {
-          login: { url: '/auth/login', method: 'post' },
-          logout: { url: '/api/auth/logout', method: 'post' },
-          user: { url: '/auth/user/get', method: 'get' }
+          login: { url: '/user/login', method: 'post' },
+          logout: { url: '/user/logout', method: 'post' },
+          user: { url: '/user/get', method: 'get' }
         }
       },
 

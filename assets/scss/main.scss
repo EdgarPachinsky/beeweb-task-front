@@ -31,7 +31,7 @@ a{
 
     span{
       font-style: italic;
-      color: $appBlue;
+      color: $appCyan;
     }
   }
 
@@ -207,6 +207,40 @@ a{
     }
   }
 
+  .main-t-body{
+    width: 100%;
+    overflow-x: auto;
+  }
+  .user-list-status{
+    padding: 0 15px 2px 15px;
+    text-align: center;
+    border-radius: 3rem;
+    display: inline-block;
+
+    &.active{
+      background: green;
+      color: white;
+    }
+    &.disabled{
+      color: white;
+      background: red;
+    }
+  }
+
+
+}
+.clear-all-button{
+  padding: 0 15px 2px 15px;
+  text-align: center;
+  border-radius: 0.2rem;
+  display: inline-block;
+  color: white;
+  background: red;
+  margin-bottom: 5px;
+
+  &.hover{
+    cursor: pointer;
+  }
 }
 
 .user-avatar-small-container {
@@ -244,7 +278,9 @@ a{
   padding: 10px;
 
   img{
-    width: 100%;
+    display: block;
+    width: 50%;
+    margin: 0 auto;
   }
 }
 .add-container{

@@ -4,7 +4,7 @@
 
       <b-navbar-brand class="app-name">
         <nuxt-link to="/">
-          Workspaces<span>IO</span>
+          Multi<span>TOOL</span>
           <nuxt-img class="nav-logo" src="/icons/logo.png" />
         </nuxt-link>
       </b-navbar-brand>
@@ -27,10 +27,10 @@
 
           <b-button to="/user/cabinet" type="button" class="user-avatar-small-container custom-button nav-button user-info" variant="">
             <span>
-              <img
-                class="user-avatar-small"
-                :src="avatar"
-                alt="">
+<!--              <img-->
+<!--                class="user-avatar-small"-->
+<!--                :src="avatar"-->
+<!--                alt="">-->
             </span>
             @_{{ $auth.user.username || $auth.user.name  }}
           </b-button>
@@ -42,7 +42,7 @@
 
         <template v-else>
           <b-button to="/auth/login" type="button" class="custom-button nav-button" variant="">Login</b-button>
-          <b-button to="/auth/register" type="button" class="custom-button nav-button" variant="">Register</b-button>
+<!--          <b-button to="/auth/register" type="button" class="custom-button nav-button" variant="">Register</b-button>-->
         </template>
       </div>
 
@@ -57,11 +57,10 @@ export default {
   data(){
     return{
       timestamp: "",
-      hostPrefix: `http://localhost:3000/file`,
-      avatar: null,
+      // hostPrefix: `http://localhost:3000/file`,
+      // avatar: null,
     }
   },
-
 
   methods: {
 
@@ -96,7 +95,7 @@ export default {
   },
 
   mounted() {
-    this.setAvatar()
+    // this.setAvatar()
   }
 }
 </script>
